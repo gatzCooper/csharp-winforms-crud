@@ -6,7 +6,7 @@ namespace CRUD
 {
     class ADO
     {
-        private const string serverName = "PRO-PC\\SQLSERVER";
+        private const string serverName = "localhost\\SQLEXPRESS";
         private const string dataBaseName = "school";
         private const bool integratedSecurity = true;
 

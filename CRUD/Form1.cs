@@ -22,6 +22,8 @@ namespace CRUD
         // Form Loading Handler
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'schoolDataSet.Student' table. You can move, or remove it, as needed.
+            this.studentTableAdapter.Fill(this.schoolDataSet.Student);
             if (this.db.Con.State == ConnectionState.Open)
             {
                 this.load_students();
@@ -145,6 +147,7 @@ namespace CRUD
         private void next_student(object sender, EventArgs e)
         {
             index = index + 1 > dt.Rows.Count - 1 ? 0 : index + 1;
+         
             fill_TexBoxes(index);
         }
         // Navigate to Previeus Student
@@ -174,5 +177,11 @@ namespace CRUD
             Application.Exit();
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            
+       
+        }
     }
 }
